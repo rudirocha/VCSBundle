@@ -1,0 +1,8 @@
+{% if app.session.flashbag.has('checkoutError') %}
+    <h4 class="error-message">{{ 'rubius.vcs.flashbag.checkoutErrors' | trans([], 'rubius_vcs_messages') }}</h4>
+    {% for flashMessage in app.session.flashbag.get('checkoutError') %}
+        <div class="empty error-message">
+            <pre>{{ flashMessage }}</pre>
+        </div>
+    {% endfor %}
+{% endif %}

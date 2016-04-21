@@ -1,0 +1,45 @@
+rubius:
+  vcs:
+    messages:
+      noCreatedBranch: No Branch
+      noCommittedBranchesFull: It was not possible to get GIT information.<br/> Have you already initialized Git or even done first commit?
+      notInitialized: Do you have GIT?
+      thereAreErrors: Oops!
+    info-piece:
+      title:
+        ErrorsTitle: Errors Found
+        branchInfo: Branch Information
+        userInfo: GIT User Information
+        branchStatus: File Status Information
+        remoteInfo: Remote Information
+        branchList: Branch List
+      branchInfo:
+        branchName: Branch Name
+      userInfo:
+          userName: Username
+          userNameEmpty: No NAME defined
+          userEmail: User Email
+          userEmailEmpty: No EMAIL defined
+      branchStatus:
+          emptyIndex: No file info. to show
+          added: Locally added
+          addedByThem: Added By Them (Unmerged)
+          addedByUs: Added By Us (Unmerged)
+          bothAdded: Both Added (Unmerged)
+          bothDeleted: Both Deleted (Unmerged)
+          deleted: Locally Deleted
+          deletedByThem: Deleted By Them Unmerged)
+          deletedByUs: Deleted By Us (Unmerged)
+          deletedRemote: Deleted On Remote
+          modified: Modified
+          bothModified: Both Modified (Unmerged)
+          renamed: Renamed
+          unTracked: Untracked
+          unknown: Unknown
+          ignored: Ignored Files
+      remoteInfo:
+          origin:
+              url: Origin URL
+    flashbag:
+      checkoutErrors: Git Checkout Command Error
+    nothingToShow: Nothing to show!

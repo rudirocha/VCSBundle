@@ -1,0 +1,41 @@
+{% if (collector.branchInfo['branchStatus'].errors == false) %}
+    <h3>{{ 'rubius.vcs.info-piece.title.branchStatus' | trans([], 'rubius_vcs_messages') }}</h3>
+    <table>
+        {% for index, tree in collector.branchInfo['branchStatus'].extraData['fileIndex'] if collector.branchInfo['branchStatus'].extraData['fileIndex'] is defined %}
+            <tr>
+                <td><b>{{ ('rubius.vcs.info-piece.branchStatus.' ~ index) | trans([], 'rubius_vcs_messages') }}</b>
+                </td>
+                <td>{{ dump(tree) }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <th>{{ 'rubius.vcs.info-piece.branchStatus.emptyIndex' | trans([], 'rubius_vcs_messages') }}</th>
+            </tr>
+        {% endfor %}
+    </table>
+    {% if (collector.branchInfo['branchList'].errors == false and collector.branchInfo['branchList'].extraData['branches'] is defined) %}
+        <h3>{{ 'rubius.vcs.info-piece.title.branchList' | trans([], 'rubius_vcs_messages') }}</h3>
+        <div class="metrics">
+            {% for branch, branchCommitLogProcess in collector.branchInfo['branchList'].extraData['branches'] if collector.branchInfo['branchList'].extraData['branches'] is not empty%}
+                {% if branch %}
+                    <div class="metric">
+                        <div class="empty branch-name">{{ branch }}</div>
+                        <pre class="commit-log">{{ branchCommitLogProcess.output }}</pre>
+                            <span class="label">
+                                <a class="branch-checkout-link"
+                                   href="{{ path('rubius.vcs.branch.checkout', {'branchName' : branch}) }}">
+                                    checkout
+                                </a>
+                            </span>
+                    </div>
+                {% endif %}
+                {% else %}
+                <div class="empty branch-name">
+                    {{ 'rubius.vcs.nothingToShow' | trans([], 'rubius_vcs_messages') }}
+                </div>
+            {% endfor %}
+        </div>
+        {% else %}
+
+    {% endif %}
+{% endif %}

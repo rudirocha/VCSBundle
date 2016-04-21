@@ -1,0 +1,14 @@
+<h3>{{ 'rubius.vcs.info-piece.title.branchInfo' | trans([], 'rubius_vcs_messages') }}</h3>
+<div class="sf-toolbar-info-piece">
+    <b>{{ 'rubius.vcs.info-piece.branchInfo.branchName' | trans([], 'rubius_vcs_messages') }}</b>
+    {% if branchInfo['branchName'].errors == false %}
+        <span class="sf-toolbar-status {{ statusColorClass }}">
+                {{ branchInfo['branchName'].output }}
+        </span>
+
+    {% else %}
+        <span class=" sf-toolbar-status sf-toolbar-status-yellow">
+                {{ (branchInfo['branchName'].messages | trans([], 'rubius_vcs_messages')) | raw }}
+            </span>
+    {% endif %}
+</div>

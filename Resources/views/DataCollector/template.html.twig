@@ -1,0 +1,85 @@
+{% extends '@WebProfiler/Profiler/layout.html.twig' %}
+
+{% block toolbar %}
+    {% set branchInfo = collector.branchInfo %}
+    {% set userInfo = collector.userInfo %}
+    {% set remoteInfo = collector.remoteInfo %}
+
+    {% if branchInfo['branchStatus'] is defined and branchInfo['branchStatus'].extraData['fileIndex'] is defined %}
+        {% if (branchInfo['branchStatus'].extraData['fileIndex'] | length) > 0 %}
+            {% set statusColorClass = 'sf-toolbar-status-yellow' %}
+        {% else %}
+            {% set statusColorClass = 'sf-toolbar-status-green' %}
+        {% endif %}
+    {% else %}
+        {% set statusColorClass = '' %}
+    {% endif %}
+
+    {% set icon %}
+        {% include '@RubiusVCS/_partials/icon_git.html.twig' %}
+        {% if branchInfo['branchName'] is defined %}
+            {% if branchInfo['branchName'].errors == true %}
+                <span class="sf-toolbar-value sf-toolbar-status sf-toolbar-status-red">
+                {{ 'rubius.vcs.messages.thereAreErrors' | trans([], 'rubius_vcs_messages') }}
+                </span>
+            {% else %}
+                <span class="sf-toolbar-status {{ statusColorClass }}">
+                {{ branchInfo['branchName'].output }}
+            </span>
+            {% endif %}
+        {% endif %}
+    {% endset %}
+
+    {% set text %}
+        {% include 'RubiusVCSBundle:_partials:text_git_user_config.html.twig' %}
+        {% include 'RubiusVCSBundle:_partials:text_git_remote_config.html.twig' %}
+        {% include 'RubiusVCSBundle:_partials:text_git_branch_name.html.twig' %}
+        {# File Index counts#}
+
+        {% if branchInfo['branchStatus'] is defined %}
+            {% include 'RubiusVCSBundle:_partials:text_git_status.html.twig' %}
+        {% endif %}
+    {% endset %}
+
+
+
+    {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { 'link': true }) }}
+{% endblock %}
+{% block head %}
+    {{ parent() }}
+    <style>
+        .branch-name {
+            color: #222;
+            font-weight: bold;
+            margin: 5px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .branch-checkout-link,
+        .branch-checkout-link {
+            color: #222;
+            text-decoration: none;
+        }
+
+        .commit-log {
+            margin: 5px;
+        }
+
+        .error-message {
+            color: #B0413E;
+        }
+    </style>
+{% endblock %}
+{% block menu %}
+    {# This left-hand menu appears when using the full-screen profiler. #}
+    <span class="label">
+        <span class="icon">{% include '@RubiusVCS/_partials/icon_git.html.twig' %}</span>
+        <strong>Rubius VCS</strong>
+    </span>
+{% endblock %}
+{% block panel %}
+    {% include 'RubiusVCSBundle:_partials:flash_bag_errors.html.twig' %}
+    {% include 'RubiusVCSBundle:_partials:text_git_branch_status.html.twig' %}
+
+{% endblock %}

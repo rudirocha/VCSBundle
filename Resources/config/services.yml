@@ -1,0 +1,6 @@
+services:
+  rubius.vcs.collector:
+      class: Rubius\VCSBundle\DataCollector\VCSCollector
+      public: false
+      tags:
+          - { name: data_collector, template: 'RubiusVCSBundle:DataCollector/template.html.twig', id: 'rubius.vcs.collector' }

@@ -1,0 +1,13 @@
+{% if branchInfo['branchStatus'].errors == false and branchInfo['branchStatus'].extraData['fileIndex'] | length > 0 %}
+    <h3>{{ 'rubius.vcs.info-piece.title.branchStatus' | trans([], 'rubius_vcs_messages') }}</h3>
+    {% for key,index in branchInfo['branchStatus'].extraData['fileIndex'] %}
+        <div class="sf-toolbar-info-piece">
+            <b>{{ ('rubius.vcs.info-piece.branchStatus.' ~ key) | trans([], 'rubius_vcs_messages') }}</b>
+            <span class="sf-toolbar-status">{{ index | length }}</span>
+        </div>
+    {% else %}
+        <div class="sf-toolbar-info-piece">
+            <b>{{ 'rubius.vcs.info-piece.branchStatus.emptyIndex' | trans([], 'rubius_vcs_messages') }}</b>
+        </div>
+    {% endfor %}
+{% endif %}

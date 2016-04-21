@@ -1,0 +1,9 @@
+{% if remoteInfo['url'] is defined and remoteInfo['url'].errors == false%}
+<h3>{{ 'rubius.vcs.info-piece.title.remoteInfo' | trans([], 'rubius_vcs_messages') }}</h3>
+<div class="sf-toolbar-info-piece">
+    <b>{{ 'rubius.vcs.info-piece.remoteInfo.origin.url' | trans([], 'rubius_vcs_messages') }}</b>
+            <span class=" sf-toolbar-status">
+                {{ (remoteInfo['url'].output) | raw }}
+            </span>
+</div>
+{% endif %}

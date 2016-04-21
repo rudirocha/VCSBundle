@@ -1,0 +1,17 @@
+<h3>{{ 'rubius.vcs.info-piece.title.userInfo' | trans([], 'rubius_vcs_messages') }}</h3>
+<div class="sf-toolbar-info-piece">
+    <b>{{ 'rubius.vcs.info-piece.userInfo.userName' | trans([], 'rubius_vcs_messages') }}</b>
+            <span class=" sf-toolbar-status {% if userInfo['userName'].errors == false %}sf-toolbar-status-green{% else %} sf-toolbar-status-yellow{% endif %}">
+                {{ (userInfo['userName'].output) | raw }}
+            </span>
+</div>
+<div class="sf-toolbar-info-piece">
+    <b>{{ 'rubius.vcs.info-piece.userInfo.userEmail' | trans([], 'rubius_vcs_messages') }}</b>
+            <span class=" sf-toolbar-status {% if userInfo['userEmail'].errors == false %}sf-toolbar-status-green{% else %} sf-toolbar-status-yellow{% endif %}">
+                {% if (userInfo['userEmail'].output is empty) %}
+                    {{ 'rubius.vcs.info-piece.userInfo.userEmailEmpty' | trans([], 'rubius_vcs_messages') }}
+                {% else %}
+                    {{ (userInfo['userEmail'].output) | raw }}
+                {% endif %}
+            </span>
+</div>

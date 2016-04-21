@@ -1,0 +1,4 @@
+rubius_vcs:
+    resource: "@RubiusVCSBundle/Controller/VCSController.php"
+    type: annotation
+    prefix: /
