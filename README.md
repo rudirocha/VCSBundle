@@ -1,6 +1,8 @@
 # VCSBundle
 A Version Control Bundle for development helping.
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/02ba5b48-9da4-4cb4-ab8a-1abfe18e2746/big.png)](https://insight.sensiolabs.com/projects/02ba5b48-9da4-4cb4-ab8a-1abfe18e2746)
+
 ## GIT
 Git is the only (for now) version control system implemented
 
