@@ -11,7 +11,7 @@ namespace Rubius\VCSBundle\Parser;
 
 use Rubius\VCSBundle\Entity\ProcessResponse;
 
-class BranchName implements Parser
+class BranchName implements ParserInterface
 {
     /**
      * @var ProcessResponse
@@ -53,6 +53,4 @@ class BranchName implements Parser
     {
         $this->processResponse = $processResponse;
     }
-
-
 }

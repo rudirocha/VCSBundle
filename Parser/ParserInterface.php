@@ -9,7 +9,7 @@
 namespace Rubius\VCSBundle\Parser;
 
 
-interface Parser
+interface ParserInterface
 {
     /**
      * Parses the output from ran process.

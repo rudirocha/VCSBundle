@@ -60,7 +60,6 @@ class Git extends VCSProcess
             if ($processResponse->isErrors()) {
 
                 //Try to understand process error
-                //@Todo: improve for message service
                 if (strpos($processResponse->getOutput(), 'unknown revision or path not in the working tree')) {
                     $processResponse->addMessage('rubius.vcs.messages.noCommittedBranchesFull');
                 } else {
@@ -105,7 +104,7 @@ class Git extends VCSProcess
             $branchInfo = [];
             $branchNames = $branchNamesParser->parseOutput();
             foreach ($branchNames as $branchName) {
-                if ($branchName != false) {
+                if ($branchName) {
                     $branchInfoProcessResponse = $this->runProcessCommand(sprintf(GitCommands::GIT_LOG_LAST_COMMIT, $branchName));
                     $branchInfo[$branchName] = $branchInfoProcessResponse;
                 }

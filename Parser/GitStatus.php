@@ -11,7 +11,7 @@ namespace Rubius\VCSBundle\Parser;
 
 use Rubius\VCSBundle\Entity\ProcessResponse;
 
-class GitStatus implements Parser
+class GitStatus implements ParserInterface
 {
     /**
      * @var ProcessResponse
