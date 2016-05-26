@@ -23,7 +23,16 @@ Git is the only (for now) version control system implemented
  > new Rubius\VCSBundle\RubiusVCSBundle(),
  
  > ...
+* Enable Datacollector routes at your routing_dev.yml
+ > ...
  
+ >  _vcsbundle:
+ 
+ >       resource: "@RubiusVCSBundle/Controller"
+ 
+ >       prefix: /_vcs
+
+ > ...
 * Make sure your config.yml has translation fallback available
 
 ## Next Steps
