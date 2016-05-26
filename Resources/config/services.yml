@@ -3,4 +3,4 @@ services:
       class: Rubius\VCSBundle\DataCollector\VCSCollector
       public: false
       tags:
-          - { name: data_collector, template: 'RubiusVCSBundle:DataCollector/template.html.twig', id: 'rubius.vcs.collector' }
+          - { name: data_collector, template: 'RubiusVCSBundle:DataCollector:template.html.twig', id: 'rubius.vcs.collector' }
