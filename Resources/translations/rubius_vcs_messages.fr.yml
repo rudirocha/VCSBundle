@@ -1,0 +1,45 @@
+rubius:
+  vcs:
+    messages:
+      noCreatedBranch:Sem Branch
+      noCommittedBranchesFull: Não foi possivel obter informação do GIT.<br/> O repositório já foi inicializado ou feito o primeiro commit?
+      notInitialized: Está instalado o GIT?
+      thereAreErrors: Oops!
+    info-piece:
+      title:
+        ErrorsTitle: Existem erros!
+        branchInfo: Informação da branch
+        userInfo: Informação de Utilizador GIT
+        branchStatus: Informação de Estados de Ficheiros
+        remoteInfo: Informação do Repositório
+        branchList: Lista de Branch
+      branchInfo:
+        branchName: Nome da Branch
+      userInfo:
+          userName: Username
+          userNameEmpty: Sem nome definido
+          userEmail: Email
+          userEmailEmpty: Sem Email definido
+      branchStatus:
+          emptyIndex: Sem informação a exibir
+          added: Adicionado localmente
+          addedByThem: Adicionado por eles (Unmerged)
+          addedByUs: Adicionado por nós (Unmerged)
+          bothAdded: Adicionado por ambos (Unmerged)
+          bothDeleted: Apagado por ambos (Unmerged)
+          deleted: Apagado localmente
+          deletedByThem: Apagado por eles Unmerged)
+          deletedByUs: Apagado por nós (Unmerged)
+          deletedRemote: Apagado no Repositório
+          modified: Modificado
+          bothModified: Ambos Modificados (Unmerged)
+          renamed: Renomeado
+          unTracked: Untracked
+          unknown: Desconhecido
+          ignored: Ficheiros ignorados
+      remoteInfo:
+          origin:
+              url: URL de origem
+    flashbag:
+      checkoutErrors: Erro no comando Git Checkout
+    nothingToShow: Nada a exibir
