@@ -1,7 +1,7 @@
 rubius:
   vcs:
     messages:
-      noCreatedBranch:Sem Branch
+      noCreatedBranch: Sem Branch
       noCommittedBranchesFull: Não foi possivel obter informação do GIT.<br/> O repositório já foi inicializado ou feito o primeiro commit?
       notInitialized: Está instalado o GIT?
       thereAreErrors: Oops!

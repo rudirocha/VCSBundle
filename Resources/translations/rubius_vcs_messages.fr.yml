@@ -1,45 +1,45 @@
 rubius:
   vcs:
     messages:
-      noCreatedBranch:Sem Branch
-      noCommittedBranchesFull: Não foi possivel obter informação do GIT.<br/> O repositório já foi inicializado ou feito o primeiro commit?
-      notInitialized: Está instalado o GIT?
+      noCreatedBranch: Sans Branch
+      noCommittedBranchesFull: Il n'etait pas possible d'obtenir d'informations du GIT.<br/> Le GIT repository a etait initialisé ou a etait fait le primiére commit?
+      notInitialized: Il est instale le GIT?
       thereAreErrors: Oops!
     info-piece:
       title:
-        ErrorsTitle: Existem erros!
-        branchInfo: Informação da branch
-        userInfo: Informação de Utilizador GIT
-        branchStatus: Informação de Estados de Ficheiros
-        remoteInfo: Informação do Repositório
-        branchList: Lista de Branch
+        ErrorsTitle: Il y a des erreurs!
+        branchInfo: Information de branch
+        userInfo: Information de utilisateur GIT
+        branchStatus: Information des etats des fichieres
+        remoteInfo: Information de GIT repository
+        branchList: Liste de Branch
       branchInfo:
-        branchName: Nome da Branch
+        branchName: Nom de Branch
       userInfo:
           userName: Username
-          userNameEmpty: Sem nome definido
+          userNameEmpty: Sans nom definí
           userEmail: Email
-          userEmailEmpty: Sem Email definido
+          userEmailEmpty: Sans Email definí
       branchStatus:
-          emptyIndex: Sem informação a exibir
-          added: Adicionado localmente
-          addedByThem: Adicionado por eles (Unmerged)
-          addedByUs: Adicionado por nós (Unmerged)
-          bothAdded: Adicionado por ambos (Unmerged)
-          bothDeleted: Apagado por ambos (Unmerged)
-          deleted: Apagado localmente
-          deletedByThem: Apagado por eles Unmerged)
-          deletedByUs: Apagado por nós (Unmerged)
-          deletedRemote: Apagado no Repositório
-          modified: Modificado
-          bothModified: Ambos Modificados (Unmerged)
+          emptyIndex: Sans information a montrer
+          added: Adicioné ici
+          addedByThem: Adicioné par eux (Unmerged)
+          addedByUs: Adicioné par nous (Unmerged)
+          bothAdded: Adicioné par les deux (Unmerged)
+          bothDeleted: Efacer par les deux (Unmerged)
+          deleted: Efacer ici
+          deletedByThem: Efacer par eux (Unmerged)
+          deletedByUs: Efacer par nous (Unmerged)
+          deletedRemote: Efacer dans le GIT Repository
+          modified: Modifié
+          bothModified: Modifié par les deux (Unmerged)
           renamed: Renomeado
           unTracked: Untracked
-          unknown: Desconhecido
-          ignored: Ficheiros ignorados
+          unknown: Inconnu
+          ignored: Fichiere ignorés
       remoteInfo:
           origin:
-              url: URL de origem
+              url: URL d'origine
     flashbag:
-      checkoutErrors: Erro no comando Git Checkout
-    nothingToShow: Nada a exibir
+      checkoutErrors: Erreur dans le GIT checkout
+    nothingToShow: Rien a montrer
